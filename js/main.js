@@ -2,7 +2,7 @@ import { Game } from "./game.js";
 import { ImageLoader } from "./image_loader.js";
 
 window.onload = () => {
-	const game = new Game();
+	window.game = new Game();
 	game.start();
 
 	document.addEventListener("input", () => {
