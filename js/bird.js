@@ -32,7 +32,7 @@ export class Bird {
 			this.alive = false;
 		} else if(this.position.y < 0 && !this.config.ceiling_kills) {
 			this.position.y = 0;
-			thie.velocity = 0;
+			this.velocity = 0;
 		}
 
 		for(let i = 0; i < pipes.length; i++) {
