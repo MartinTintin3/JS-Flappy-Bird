@@ -6,7 +6,7 @@ export class Bird {
 			height: image.height,
 		}
 		this.position = {
-			x: 20,
+			x: this.config.bird_x,
 			y: this.config.height / 4,
 		}
 		this.y_position_before_flap = null;
@@ -15,11 +15,12 @@ export class Bird {
 	}
 
 	flap() {
-		this.velocity = this.config.jump;
+		this.velocity = this.config.flap;
 		this.y_position_before_flap = this.position.y;
 	}
 
 	update(pipes) {
+		this.position.x = this.config.bird_x;
 		this.velocity += this.config.gravity;
 		this.position.y += this.velocity;
 
