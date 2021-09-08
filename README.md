@@ -11,3 +11,8 @@ Then call the `start()` method. ***Note: `Game#start()` is async(for image loadi
 
 # Configuration
 Every `Game` instance has a `config` property. It is an object that contains every hardcoded value that the game uses. You can change them by modifying the `config` object of the `Game` instance. Look at the [config.js](js/config.js) file for more information.
+
+# Example
+The [main.js](js/main.js) file is an example of how to use this library. Make sure that when you include your main script in your HTML file, you don't include all the other scripts in the library, and add the `type="module"` attribute to the script tag of the file
+
+***PS: This project was intended for use with Neural Evolution algorithms, so that why the score gets big so quickly***
