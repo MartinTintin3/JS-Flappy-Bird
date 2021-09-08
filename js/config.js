@@ -17,6 +17,7 @@ export class Config {
 		this.keybinds = { // Different keybinds for different actions
 			flap: " ",
 			pause: "p",
-		}
+		};
+		this.ceiling_kills = true; // If true, the bird will die if it touches the ceiling. If not, it will just bump into it
 	}
 }

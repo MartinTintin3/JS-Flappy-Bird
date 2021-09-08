@@ -28,8 +28,11 @@ export class Bird {
 			this.y_position_before_flap = null;
 		}
 
-		if(this.position.y < 0 || this.position.y + this.size.height > this.config.height) {
+		if(this.position.y + this.size.height > this.config.height || (this.position.y < 0 && this.config.ceiling_kills)) {
 			this.alive = false;
+		} else if(this.position.y < 0 && !this.config.ceiling_kills) {
+			this.position.y = 0;
+			thie.velocity = 0;
 		}
 
 		for(let i = 0; i < pipes.length; i++) {
