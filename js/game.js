@@ -115,6 +115,14 @@ export class Game {
 		}
 
 		this.renderer.render_pipes(this.pipes, this.images.pipetop, this.images.pipebottom, this.config.debug_mode);
+
+		if(this.config.debug_mode) {
+			this.ctx.fillStyle = "darkgreen";
+			this.ctx.beginPath();
+			this.ctx.arc(this.target_position.x, this.target_position.y, 5, 0, Math.PI * 2);
+			this.ctx.fill();
+		}
+
 		this.renderer.render_bird(this.bird, this.images.bird, this.config.animate_bird, this.config.debug_mode);
 
 		this.ctx.font = "20px Flappy Bird";
@@ -124,13 +132,6 @@ export class Game {
 		const score_text = `Current Score: ${this.score}, High Score: ${this.high_score}`;
 		this.ctx.fillText(score_text, 10, 20 + this.ctx.lineWidth * 2);
 		this.ctx.strokeText(score_text, 10, 20 + this.ctx.lineWidth * 2);
-
-		if(this.config.debug_mode) {
-			this.ctx.fillStyle = "darkgreen";
-			this.ctx.beginPath();
-			this.ctx.arc(this.target_position.x, this.target_position.y, 5, 0, Math.PI * 2);
-			this.ctx.fill();
-		}
 
 		requestAnimationFrame(() => {
 			this.render();
