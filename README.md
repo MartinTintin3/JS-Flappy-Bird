@@ -10,4 +10,4 @@ const game = new Game(ctx);
 Then call the `start()` method. ***Note: `Game#start()` is async(for image loading purposes)***
 
 # Configuration
-Every `Game` instance has a `config` property. It is an object that contains every hardcoded value that the game uses. You can change them by modifying the `config` object of the `Game` instance. Look at [config.js](js/config.js) file for more information.
+Every `Game` instance has a `config` property. It is an object that contains every hardcoded value that the game uses. You can change them by modifying the `config` object of the `Game` instance. Look at the [config.js](js/config.js) file for more information.
