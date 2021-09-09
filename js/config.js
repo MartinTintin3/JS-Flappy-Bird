@@ -6,9 +6,9 @@ export class Config {
 		this.gravity = 0.3; // How strong gravity is
 		this.flap = -6; // How much velocity a flap adds
 		this.tps = 60; // How many times per second the game updates(Multiplied by this.speed_multiplier)
-		this.pipe_spawn_rate = 2; // After how many seconds should a new pipe spawn
-		this.pipe_speed = 2.5; // Speed of the pipe
-		this.hole_size = 100; // Size of the hole between the top and bottom pipes
+		this.pipe_spawn_rate = 1.5; // After how many seconds should a new pipe spawn
+		this.pipe_speed = 3; // Speed of the pipe
+		this.hole_size = 120; // Size of the hole between the top and bottom pipes
 		this.background_speed = 0.5; // Speed of the parallax background
 		this.speed_multiplier = 1; // Speed multiplier(Can be used to speed up the game)
 		this.debug_mode = false; // If true, the game will show debug information like hitboxes and the nearest hole's center
