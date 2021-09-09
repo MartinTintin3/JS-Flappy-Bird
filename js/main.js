@@ -2,7 +2,7 @@ import { Game } from "./game.js";
 import { ImageLoader } from "./image_loader.js";
 
 window.onload = () => {
-	window.game = new Game();
+	window.game = new Game(document.getElementById("canvas").getContext("2d")); // Providing a context is optional. If not provided, a canvas will be created and its context will be used
 	game.start();
 
 	document.addEventListener("input", () => {

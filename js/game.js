@@ -5,9 +5,9 @@ import { ImageLoader } from "./image_loader.js";
 import { Renderer } from "./renderer.js";
 
 export class Game {
-	constructor(images) {
+	constructor(ctx) {
 		this.config = new Config();
-		this.ctx = document.getElementById("canvas").getContext("2d");
+		this.ctx = ctx || document.body.appendChild(document.createElement("canvas")).getContext("2d");
 		this.renderer = new Renderer(this.ctx);
 		this.ctx.canvas.width = this.config.width * 2;
 		this.ctx.canvas.height = this.config.height * 2;
@@ -15,7 +15,6 @@ export class Game {
 		this.ctx.canvas.style.height = this.config.height + "px";
 		this.ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
 		this.pipes = [];
-		this.images = images;
 		this.target_position = {
 			x: -10,
 			y: -10,
