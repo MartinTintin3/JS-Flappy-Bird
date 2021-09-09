@@ -15,7 +15,7 @@ export class Renderer {
 	}
 
 	render_bird(bird, bird_image, should_animte, debug_mode) {
-		const angle = should_animte ? Math.min(Math.PI / 4, bird.velocity / Math.PI / 4) : 0;
+		const angle = should_animte ? Math.PI / 2 * bird.velocity / 20 : 0;
 		this.ctx.translate(bird.position.x + bird.size.width / 2, bird.position.y + bird.size.height / 2);
 		this.ctx.rotate(angle);
 		this.ctx.drawImage(bird_image, -bird.size.width / 2, -bird.size.height / 2, bird.size.width, bird.size.height);
