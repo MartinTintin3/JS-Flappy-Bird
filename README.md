@@ -1,4 +1,4 @@
-# Live Demo [Here](https://martingithuber.github.io/JS-Flappy-Bird)
+# Live Demo [Here](https://martintintin3.github.io/JS-Flappy-Bird)
 # JS-Flappy-Bird
 An implementation of Flappy Bird in Javascript
 
